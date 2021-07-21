@@ -1,0 +1,26 @@
+{
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "node server-evn.js",
+    "build:client": "vite build --outDir dist/client --ssrManifest",
+    "build:server": "vite build --outDir dist/server --ssr src/entry-server.js",
+    "build": "yarn build:client && yarn build:server",
+    "preview": "yarn build && node server.js"
+  },
+  "dependencies": {
+    "@vue/server-renderer": "^3.1.5",
+    "express": "^4.17.1",
+    "koa": "^2.13.1",
+    "koa-static": "^5.0.0",
+    "vue": "^3.0.5",
+    "vue-router": "^4.0.10",
+    "vuex": "^4.0.2",
+    "vuex-router-sync": "^6.0.0-rc.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.2.5",
+    "@vue/compiler-sfc": "^3.0.5",
+    "sass": "^1.35.2",
+    "vite": "^2.4.2"
+  }
+}
