@@ -1,24 +1,33 @@
 <template>
-  <div>
-    <router-link to="/">home</router-link> | 
-    <router-link to="/about">about</router-link>
-    <router-view />
+  <div class="main">
+    <Nav />
+    <router-view></router-view>
   </div>
 </template>
 
-<script setup>
-// import HelloWorld from "./components/HelloWorld.vue";
-// This starter template is using Vue 3 experimental <script setup> SFCs
-// Check out https://github.com/vuejs/rfcs/blob/master/active-rfcs/0040-script-setup.md
+<script>
+import { defineComponent } from 'vue';
+import Nav from './components/nav.vue'
+
+export default defineComponent({
+  name: 'App',
+  components: {
+    Nav
+  }
+});
 </script>
 
-<style>
+<style lang="scss" scoped>
+html, body, #app, .main {
+  width: 100%;
+  height: 100%;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

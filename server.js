@@ -19,8 +19,8 @@ app.use(async (ctx, next) => {
 
     const html = template
       .replace(`<!--ssr-outlet-->`, appHtml)
-    //   .replace(`'<!--vuex-state-->'`, JSON.stringify(state))
-    //   .replace('<!--title-->', state.route.meta.title || 'Index');
+      .replace(`'<!--vuex-state-->'`, JSON.stringify(state))
+      .replace('<!--title-->', state.route.meta.title || 'Index');
 
     ctx.body = html;
   } catch (error) {
@@ -29,6 +29,6 @@ app.use(async (ctx, next) => {
   }
 });
 
-app.listen(3001, () => {
-  console.log('http://localhost:3001');
+app.listen(3201, () => {
+  console.log('http://localhost:3201');
 });

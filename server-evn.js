@@ -44,8 +44,8 @@ async function createServer() {
       // 5. 注入应用渲染的 HTML 到模板中。
       const html = template
         .replace(`<!--ssr-outlet-->`, appHtml) // 拿取模板
-        // .replace(`'<!--vuex-state-->'`, JSON.stringify(state)) // 拿取state
-        // .replace("<!--title-->", state.route.meta.title || "Index"); // 拿取title
+        .replace(`'<!--vuex-state-->'`, JSON.stringify(state)) // 拿取state
+        .replace("<!--title-->", state.route.meta.title || "Index"); // 拿取title
 
       // 6. 将渲染完成的 HTML 返回
       res.status(200).set({ "Content-Type": "text/html" }).end(html);

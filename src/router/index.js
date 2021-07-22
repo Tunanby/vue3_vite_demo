@@ -14,11 +14,17 @@ export default function () {
         path: "/",
         name: "home",
         component: () => import("../views/Home.vue"),
+          meta: {
+              title: 'Home title'
+          }
       },
       {
         path: "/about",
         name: "about",
         component: () => import("../views/About.vue"),
+          meta: {
+              title: 'Home title'
+          }
       },
       {
         path: "/:catchAll(.*)*",

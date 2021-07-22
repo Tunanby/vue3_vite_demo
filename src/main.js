@@ -3,3 +3,7 @@
 // import App from './App.vue'
 // 这边的挂载改到entry-clint.js 使用
 // createApp(App).mount('#app')
+import { createApp } from 'vue'
+import App from './App.vue'
+
+createApp(App).mount('#app')

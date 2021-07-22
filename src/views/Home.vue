@@ -13,13 +13,11 @@ export default defineComponent({
   setup() {
     const store = useStore();
     const girls = ref(["大脚", "刘英", "晓红"]);
-    
     return { store, girls };
   },
   asyncData({ store }) {
     return store.dispatch('fetchMessage');
-  },
-
+  }
 });
 </script>
 
